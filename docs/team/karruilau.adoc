@@ -7,7 +7,8 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 iungo is a desktop address book application used for learning Software Engineering principles. The user interacts with
 it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.
 
-*Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] {give links to collated code files}
+*Code contributed*: [https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/main/karrui.md[Functional code]]
+[https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/test/karrui.md[Test code]] +
 
 === Enhancement Added: Setting of homepage
 
@@ -154,20 +155,19 @@ include::../DeveloperGuide.adoc[tag=optadd]
 ---
 
 === Other contributions
-==== Wrote user stories for iungo
+==== iungo
+* Wrote user stories
+* Wrote SampleData.xml and TestScript.adoc (Pull requests https://github.com/CS2103AUG2017-F11-B3/main/pull/92[#92])
 
 ==== Volunteering own features for reuse
 
-*Recent command:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/168[forum post]] +
-*Sort functionality:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/117[forum post]] +
-*Avatar command:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/120#issuecomment-339020868[forum post]]
+* *Recent command:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/168[forum post]] +
+* *Sort functionality:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/117[forum post]] +
+* *Avatar command:* [https://github.com/nus-cs2103-AY1718S1/forum/issues/120#issuecomment-339020868[forum post]]
 
 ==== Helped in finding bugs
-Bug discovered in AB4: [https://github.com/se-edu/addressbook-level4/issues/727[forum post]] +
-Bugs discovered in Planno: [https://github.com/CS2103AUG2017-W14-B4/main/issues/created_by/karrui[issues page]]
+* Bug discovered in AB4: [https://github.com/se-edu/addressbook-level4/issues/727[forum post]] +
+* Bugs discovered in Planno: [https://github.com/CS2103AUG2017-W14-B4/main/issues/created_by/karrui[issues page]]
 
 ==== Helping others with issues
-Posts: [https://github.com/nus-cs2103-AY1718S1/forum/issues?utf8=%E2%9C%93&q=is%3Aissue%20commenter%3Akarrui[issues page]]
-
-
-{To be included in the future}
+* Posts: [https://github.com/nus-cs2103-AY1718S1/forum/issues?utf8=%E2%9C%93&q=is%3Aissue%20commenter%3Akarrui[issues page]]

@@ -1,0 +1,49 @@
+= Basyir Othman - Project Portfolio
+ifdef::env-github,env-browser[:outfilesuffix: .adoc]
+:imagesDir: ../images
+:stylesDir: ../stylesheets
+
+== Project: iungo
+iungo is a desktop address book application used for learning Software Engineering principles. The user interacts with
+it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.
+
+*Code contributed*:  [https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/main/basyiro.md[Functional code]]
+                    [https://github.com/CS2103AUG2017-F11-B3/main/blob/master/collated/test/basyiro.md[Test code]] +
+
+=== Enhancement Added: Remove tags from the AddressBook.
+
+==== External behavior
+
+---
+#Start of Extract [from: User Guide]#
+
+include::../UserGuide.adoc[tag=removetag]
+
+#End of Extract#
+
+---
+
+==== Justification
+
+User had to delete the entry if they had keyed in a wrong tag and remade a whole other entry with the same parameters
+to change the tags.
+
+This implementation enhances the usability of the application by allowing the user to update necessary tags and
+removing them when it becomes obsolete.
+
+==== Implementation
+
+---
+#Start of Extract [from: Developer Guide]#
+
+include::../DeveloperGuide.adoc[tag=removetag]
+
+#End of Extract#
+
+---
+
+=== Other contributions
+* Wrote non-functional requirements
+
+
+

@@ -18,6 +18,7 @@ import seedu.address.model.person.Email;
 import seedu.address.model.person.Homepage;
 import seedu.address.model.person.Name;
 import seedu.address.model.person.Phone;
+import seedu.address.model.person.Remark;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -87,7 +88,17 @@ public class ParserUtil {
 
     //@@author karrui
     /**
+     * Parses a {@code Optional<String> Remark} into an {@code Optional<Remark>} if {@code remark} is present.
+     * See header comment of this class regarding the use of {@code Optional} parameters.
+     */
+    public static Optional<Remark> parseRemark(Optional<String> remark) throws IllegalValueException {
+        requireNonNull(remark);
+        return remark.map(Remark::new);
+    }
+
+    /**
      * Parses a {@code Optional<String> homepage} into an {@code Optional<Homepage>} if {@code homepage} is present.
+     * If {@code homepage} is "", returns default homepage constructor.
      * See header comment of this class regarding the use of {@code Optional} parameters.
      */
     public static Optional<Homepage> parseHomepage(Optional<String> homepage) throws IllegalValueException {
@@ -116,6 +127,7 @@ public class ParserUtil {
         return tagSet;
     }
 
+    //@@author yewshengkai
     /**
      * Parses a {@code Collection<String> Detail} into an {@code ArrayList<String>}.
      */
@@ -128,12 +140,12 @@ public class ParserUtil {
             string = string.replaceAll("['\\[\\]']", "");
             switch (commandType) {
             case FindCommand.COMMAND_WORD_ADDRESS:
-                if (!Address.isValidAddress(string)) {
+                if (!Address.isValidAddress(string) || string.isEmpty()) {
                     throw new IllegalValueException(Address.MESSAGE_ADDRESS_CONSTRAINTS);
                 }
                 break;
             case FindCommand.COMMAND_WORD_EMAIL:
-                if (!Email.isValidEmail(string)) {
+                if (!Email.isValidEmail(string) || string.isEmpty()) {
                     throw new IllegalValueException(Email.MESSAGE_EMAIL_CONSTRAINTS);
                 }
                 break;
@@ -159,6 +171,7 @@ public class ParserUtil {
         }
         return detailList;
     }
+    //@@author
 
     //@@author karrui
     /** Parses {@code sortOrder} into a {@code boolean} and returns it.
@@ -186,7 +199,7 @@ public class ParserUtil {
 
     //@@author yewshengkai
     /**
-     * Parse parameters tag, if exist, return value. If tag does not exist, return empty string.
+     * Parse parameters tag (singular), if exist, return value. If tag does not exist, return empty string.
      */
     public static Optional<Tag> parseTag(Optional<String> tag) throws IllegalValueException {
         requireNonNull(tag);
